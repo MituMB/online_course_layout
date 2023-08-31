@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+html {
+  position: relative;
+  min-height: 100%;
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background:#ddd;
+}
+a{
+    text-decoration:none;
+    cursor:pointer;
+}
+/*---------------------
+  Header area
+-----------------------*/
+
+.main_header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*align-items: center;*/
+    background: #fff;
+}
+.header_left {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    /*align-items: center;*/
+}
+    .header_left .logo {
+        background: #000;
+        color: #fff;
+        /*padding: 20px;*/
+        font-size: 30px;
+        clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+        width: 300px;
+        line-height: 80px;
+        cursor: pointer;
+    }
+    .header_right {
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        gap:20px;
+        justify-content: flex-end;
+        padding-right:20px;
+        line-height:80px;
+    }
+        .header_right .contact {
+            background: #FFC107;
+            width: 200px;
+            clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+            text-align: center;
+            /* vertical-align: middle; */
+        }
+            .header_right .contact:hover{
+                background:#000;
+                color:#fff;
+                cursor:pointer;
+            }
+            .nav_menu {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                align-items: center;
+            }
+/*---------------------
+  Categories
+-----------------------*/
+.categories__item {
+    height: 270px;
+    position: relative;
+}
+
+    .categories__item h5 {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        padding: 0 20px;
+        bottom: 20px;
+        text-align: center;
+    }
+
+        .categories__item h5 a {
+            font-size: 18px;
+            color: #1c1c1c;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 12px 0 10px;
+            background: #ffffff;
+            display: block;
+        }
+
+.categories__slider .col-lg-3 {
+    max-width: 100%;
+}
+
+.categories__slider.owl-carousel .owl-nav button {
+    font-size: 18px;
+    color: #1c1c1c;
+    height: 70px;
+    width: 30px;
+    line-height: 70px;
+    text-align: center;
+    border: 1px solid #ebebeb;
+    position: absolute;
+    left: -35px;
+    top: 50%;
+    -webkit-transform: translateY(-35px);
+    background: #ffffff;
+}
+
+    .categories__slider.owl-carousel .owl-nav button.owl-next {
+        left: auto;
+        right: -35px;
+    }
+
+
+/*---------------------
+  Booking card
+-----------------------*/
+.section_title a:hover {
+    color: #FFC107;
+}
+
+.booking_post .card .img {
+}
+
+/*---------------------
+  Footer
+-----------------------*/
+.footer {
+    position: relative !important;
+    color: #fff;
+    line-height: inherit !important;
+}
+.footer_top {
+    background:#000;
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+}
+    .footer_top h2 a {
+        color: #FFC107;
+    }
+    .footer_top .links{
+        display:flex;
+        flex-flow:column;
+        gap:5px;
+    }
+    .footer_bottom {
+        /*position:absolute;*/
+        bottom:0;
+        width:100%;
+        background: #FFC107;
+        color: #000;
+        text-align: center;
+        padding:10px;
+    }

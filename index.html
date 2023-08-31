@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Title</title>
+</head>
+<body>
+        
+    <header class="main_header ">
+        <div class="header_left">
+            <div class="logo">
+                <a title="logo" asp-area="" asp-controller="Home" asp-action="Index" >Energy Trust</a>
+           </div>
+            <div class="nav_menu">
+                <div class="nav_item">
+                    <a>Training Courses</a>
+                    <div class="sub_menu">
+
+                    </div>
+                </div>
+                <div class="nav_item">
+                    <a>About us</a>
+                </div>
+                <div class="nav_item">
+                    <!-- @if (SignInManager.IsSignedIn(User))
+                    {
+                        @if (User.IsInRole(SD.Role_Admin) || User.IsInRole(SD.Role_Emplyee))
+                        { -->
+                            
+                                <a  asp-area="Admin" asp-controller="Dashboard" asp-action="Index">Dashboard</a>
+                           
+                        <!-- }
+                    } -->
+                </div>
+            </div>
+        </div>
+        <div class="header_right">
+            <a>
+                <span>Call Us</span>
+            </a>
+            <div class="contact">
+                <span>Contact Us</span>
+            </div>
+            <a>
+
+                <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" >
+
+                    <button type="submit" class="nav-link btn btn-link text-dark"><span>Logout</span></button>
+                </form>
+                </a>
+                <form id="myform" method="post">
+
+                    <a>Submit</a>
+                </form>
+          
+              
+                <a id="login" asp-area="Identity" asp-page="/Account/Login">
+                    <span>Sign in</span>
+
+                </a>
+            
+            <!-- @if (SignInManager.IsSignedIn(User))
+            {
+                <a>
+
+                <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" >
+
+                    <button type="submit" class="nav-link btn btn-link text-dark"><span>Logout</span></button>
+                </form>
+                </a>
+                @*<form id="myform" method="post">
+
+                    <a asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" onclick="document.getElementById('myform').submit()">Submit</a>
+                </form>*@
+            }
+            else
+            {
+              
+                <a id="login" asp-area="Identity" asp-page="/Account/Login">
+                    <span>Sign in</span>
+
+                </a>
+            } -->
+        </div>
+
+
+    </header>
+
+    <div class="container-fluid">        
+        <main role="main" class="pb-3">
+            <!-- @RenderBody() -->
+            <section class="booking_post">
+                <div class="section_title ">
+                    <div class="container d-flex justify-content-between align-items-center py-3">
+                        <h3>Upcoming Courses</h3>
+                        <a>View courses  <span><i class="fa-regular fa-circle-right"></i></span>   </a>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                    <div class="col-md-4">
+                        <div class="card p-4">
+                            <div class="img_holder">
+                                <img src="~/images/products/card1.jpg" class="img-fluid"/>
+                            </div>
+                            <h5 class="pt-3">
+                                    Solidity & Ethereum in React (Next JS): The Complete Guide 2023-3
+                            </h5>
+                            <div class="text-secondary text-sm d-flex justify-content-between">
+                                <span>24th August</span>  <span>Price: $5000</span>
+                            </div>
+                                <button class="btn-sm btn-warning">Book Now</button>
+            
+            
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card p-4">
+                            <div class="img_holder">
+                                <img src="~/images/products/card1.jpg" class="img-fluid" />
+                            </div>
+                                <h5 class="pt-3">
+                                    React – Beginner to Advanced (+ Redux & Ecommerce App) 2022-9
+                            </h5>
+                            <div class="text-secondary text-sm d-flex justify-content-between">
+                                <span>24th August</span>  <span>Price: $5000</span>
+                            </div>
+                            <button class="btn-sm btn-warning">Book Now</button>
+            
+            
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card p-4">
+                            <div class="img_holder">
+                                <img src="~/images/products/card1.jpg" class="img-fluid" />
+                            </div>
+                                <h5 class="pt-3">
+                                    React Next.js – Cookie Based Secure Authentication System 2021-3
+                            </h5>
+                            <div class="text-secondary text-sm d-flex justify-content-between">
+                                <span>24th August</span>  <span>Price: $5000</span>
+                            </div>
+                            <button class="btn-sm btn-warning">Book Now</button>
+            
+            
+                        </div>
+                        </div>
+                    </div>
+            
+                </div>
+            </section>
+        </main>
+    </div>
+
+   
+    <footer class="border-top footer text-muted">
+        
+        <div class="footer_top">
+            <div class="logo">
+                <h2>
+
+                <a title="logo" asp-area="" asp-controller="Home" asp-action="Index">Energy Trust</a>
+                </h2>
+            </div>
+            <div class="links">
+                <a>Course Schedule</a>
+                <a>Contact Us</a>
+                <a>Online Courses</a>
+                <a>Career</a>
+            </div>
+            <div class="links">
+                <a>Course Schedule</a>
+                <a>Contact Us</a>
+                <a>Online Courses</a>
+                <a>Career</a>
+            </div>
+            <div class="links">
+                <a>Course Schedule</a>
+                <a>Contact Us</a>
+                <a>Online Courses</a>
+                <a>Career</a>
+            </div>
+        </div>
+        <div class="footer_bottom">
+        <div class="container">
+            <p>Copyright &copy; 2023 Energy Trust     <span>All Rights reserved.</span></p>
+        
+            <!-- @*<span><a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></span>*@ -->
+            
+        </div>
+        </div>
+    </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
