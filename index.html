@@ -8,12 +8,14 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/vgnav.css">
+<link rel="stylesheet" href="assets/css/vgnav-theme.css">
 <title>Title</title>
 </head>
 <body>
         
     <header class="main_header ">
-        <div class="header_left">
+        <!-- <div class="header_left">
             <div class="logo">
                 <a title="logo" asp-area="" asp-controller="Home" asp-action="Index" >Energy Trust</a>
            </div>
@@ -78,15 +80,11 @@
                     <a>About us</a>
                 </div>
                 <div class="nav_item">
-                    <!-- @if (SignInManager.IsSignedIn(User))
-                    {
-                        @if (User.IsInRole(SD.Role_Admin) || User.IsInRole(SD.Role_Emplyee))
-                        { -->
+               
                             
                                 <a  asp-area="Admin" asp-controller="Dashboard" asp-action="Index">Dashboard</a>
                            
-                        <!-- }
-                    } -->
+           
                 </div>
             </div>
         </div>
@@ -97,17 +95,7 @@
             <div class="contact">
                 <span>Contact Us</span>
             </div>
-            <a>
-
-                <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" >
-
-                    <button type="submit" class="nav-link btn btn-link text-dark"><span>Logout</span></button>
-                </form>
-                </a>
-                <form id="myform" method="post">
-
-                    <a>Submit</a>
-                </form>
+        
           
               
                 <a id="login" asp-area="Identity" asp-page="/Account/Login">
@@ -115,31 +103,104 @@
 
                 </a>
             
-            <!-- @if (SignInManager.IsSignedIn(User))
-            {
-                <a>
-
-                <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" >
-
-                    <button type="submit" class="nav-link btn btn-link text-dark"><span>Logout</span></button>
-                </form>
-                </a>
-                @*<form id="myform" method="post">
-
-                    <a asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" onclick="document.getElementById('myform').submit()">Submit</a>
-                </form>*@
-            }
-            else
-            {
-              
-                <a id="login" asp-area="Identity" asp-page="/Account/Login">
-                    <span>Sign in</span>
-
-                </a>
-            } -->
-        </div>
-
-
+     
+        </div> -->
+        <!-- <div class="header_left"> -->
+            <!-- <div class="logo">
+                <a title="logo" asp-area="" asp-controller="Home" asp-action="Index" >Energy Trust</a>
+           </div> -->
+       
+            <nav class="vg-nav">
+                <div class="logo">
+                    <a title="logo" asp-area="" asp-controller="Home" asp-action="Index" >Energy Trust</a>
+               </div>
+                <ul class="vg-nav-wrapper">
+                  <li class="active">
+                    <a href="/">Home page</a>
+                  </li>
+                  <li class="dropdown-mega">
+                    <a href="/">Training Courses </a>
+                    <div class="dropdown-mega-container sub_menu">
+                        <div class="wrap">
+                            <div class="item_list">
+                                <a>Book an appointment</a>
+                                <a>offline courses</a>
+                                <a>Online courses</a>
+                                <a>View all courses</a>
+                                
+                            </div>
+                            <div class="item_list">
+                                <a>Book an appointment</a>
+                                <a>offline courses</a>
+                                <a>Online courses</a>
+                                <a>View all courses</a>
+                                
+                            </div>
+                            <div class="item_list">
+                                <a>Book an appointment</a>
+                                <a>offline courses</a>
+                                <a>Online courses</a>
+                                <a>View all courses</a>
+                                
+                            </div>
+                            <div class="item_list">
+                                <a>Book an appointment</a>
+                                <a>offline courses</a>
+                                <a>Online courses</a>
+                                <a>View all courses</a>
+                                
+                            </div>
+                            <div class="item_list">
+                                <a>Book an appointment</a>
+                                <a>offline courses</a>
+                                <a>Online courses</a>
+                                <a>View all courses</a>
+                                
+                            </div>
+                            <div class="item_list">
+                                <a>Book an appointment</a>
+                                <a>offline courses</a>
+                                <a>Online courses</a>
+                                <a>View all courses</a>
+                                
+                            </div>
+                            <div class="item_list">
+                                <a>Book an appointment</a>
+                                <a>offline courses</a>
+                                <a>Online courses</a>
+                                <a>View all courses</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="">Call us</a>
+                </li>
+                <li>
+                    <a href="">Contact</a>
+                </li>
+                <li>
+                    <a href="">Sign in</a>
+                </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="">Call us</a>
+                    </li>
+                    <li>
+                        <a href="">Contact</a>
+                    </li>
+                    <li>
+                        <a href="">Sign in</a>
+                    </li>
+             
+                </ul>
+              </nav>
+        
+        <!-- </div> -->
+       
+        
     </header>
 
     <div class="container-fluid">        
@@ -250,5 +311,28 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+<script src="assets/css/vgnav.umd.js"></script>
+<script>
+
+new VGNav({
+    // options
+    expand:'lg',
+    isHover:true,
+    placement:'vertical',
+    toggle: '<span class="default"></span>',
+    mobileTitle: 'Ecom Web',
+    sidebar: {
+      placement: 'left',
+      clone: null,
+      width: 250
+    },
+    move: true,
+
+})
+
+// let vg_nav = new VGNav('#myNav',{
+//     mobileTitle: '<a href="https://www.jqueryscript.net/tags.php?/Navigation/">Navigation</a>'
+// });
+</script>
 </body>
 </html>
